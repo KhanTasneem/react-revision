@@ -1,6 +1,8 @@
 import './App.css'
 import { Day1 } from './features/day1-props-state'
 import { Day2 } from './features/day2-useEffect-cleanup'
+import { Day3 } from './features/day3-list-keys'
+import { Day4 } from './features/day4-forms'
 
 function App() {
 
@@ -8,6 +10,8 @@ function App() {
     <>
       <Day1 />
       <Day2 />
+      <Day3 />
+      <Day4 />
     </>
   )
 }

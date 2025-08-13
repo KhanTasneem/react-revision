@@ -67,3 +67,15 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 | 12  | Error Boundaries          | ErrorBoundary typing                       | Error handling UI               |
 | 13  | Testing Basics            | Props typing in tests                      | Test a typed comp               |
 | 14  | Performance Patterns      | `React.memo` + TS                          | Prevent extra renders           |
+
+# Formik + MUI touched handling — Quick Notes
+- Works
+<Field as={TextField} /> → Formik injects onBlur/onChange automatically. (recommended)
+<TextField onBlur={handleBlur} /> → Manual wiring, works fine.
+
+- Doesn’t work
+<Field component={TextField} /> → MUI’s <TextField> is not a raw input; Formik’s component prop doesn’t auto-bind onBlur to the inner input.
+
+- Fix for component
+Use render props or a custom wrapper to spread { field, form } into MUI <TextField>.
+

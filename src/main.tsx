@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { theme } from './theme.ts'
-import { ScrollToTop } from './features/day2-useEffect-cleanup/components/ScrollToTop'
+import { ScrollToTop } from './components/ScrollToTop.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
