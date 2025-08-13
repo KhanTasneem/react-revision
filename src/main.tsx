@@ -4,12 +4,14 @@ import './index.css'
 import App from './App.tsx'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { theme } from './theme.ts'
+import { ScrollToTop } from './features/day2-useEffect-cleanup/components/ScrollToTop'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <App />
+    <ScrollToTop />
     </ThemeProvider>
   </StrictMode>,
 )

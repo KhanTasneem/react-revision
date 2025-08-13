@@ -49,3 +49,21 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </ThemeProvider>
   </React.StrictMode>
 );
+## 📌 React + TypeScript Revision Plan
+
+| Day | Concept                   | TS Focus                                   | Example Drill                   |
+| --- | ------------------------- | ------------------------------------------ | ------------------------------- |
+| 1   | Props & State             | Props interface, `useState` generics       | Counter with reset (done today) |
+| 2   | `useEffect` + Cleanup     | `useEffect` deps typing                    | API fetch + cleanup             |
+| 3   | Lists & Keys              | Typing arrays of objects                   | Render typed list               |
+| 4   | Forms                     | Controlled inputs with `ChangeEvent` types | Simple form                     |
+| 5   | Conditional Rendering     | Union types, optional props                | Role-based UI                   |
+| 6   | Context API               | Context typing with `createContext`        | Theme switcher                  |
+| 7   | Custom Hooks              | Generic hook return types                  | `useFetch` hook                 |
+| 8   | `useReducer`              | Action & State interfaces                  | Todo reducer                    |
+| 9   | `useMemo` & `useCallback` | Memoizing typed functions                  | Expensive calc example          |
+| 10  | Component Composition     | Props children typing                      | Card component                  |
+| 11  | Code Splitting            | `React.lazy` typing                        | Lazy loaded pages               |
+| 12  | Error Boundaries          | ErrorBoundary typing                       | Error handling UI               |
+| 13  | Testing Basics            | Props typing in tests                      | Test a typed comp               |
+| 14  | Performance Patterns      | `React.memo` + TS                          | Prevent extra renders           |
