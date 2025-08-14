@@ -34,8 +34,7 @@ export const ContactForm = () => {
                     onSubmit={handleSubmit}
                     validationSchema={validationSchema}
                 >
-                    {({ errors, touched, resetForm, handleBlur }) => {
-                        console.log("touched", touched);
+                    {({ errors, touched, resetForm }) => {
                         return (
                             <Form>
 
@@ -51,15 +50,17 @@ export const ContactForm = () => {
                                     helperText={touched.name && errors.name}
                                 /> */}
                                 <Field 
-                                    name='name'
                                     as={TextField}
+                                    id="name"
+                                    name='name'
                                     placeholder='Name'
                                     size='small'
-                                    error={touched.name && !!errors.name}
-                                    helperText={touched.name && errors.name}
+                                    // error={touched.name && !!errors.name}
+                                    helperText={errors.name}
                                 />
                                 <Field
                                     as={TextField}
+                                    id="email"
                                     name='email'
                                     placeholder='Email'
                                     size='small'
@@ -69,6 +70,7 @@ export const ContactForm = () => {
                                 />
                                 <Field
                                     as={TextField}
+                                    id="message"
                                     name='message'
                                     placeholder='Message'
                                     multiline
